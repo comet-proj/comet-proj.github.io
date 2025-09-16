@@ -171,7 +171,17 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="publication-video">
+            <video id="dollyzoom" controls loop playsinline height="100%">
+              <source src="./static/videos/papers_1571_video.mp4"
+                      type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -189,20 +199,24 @@
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
-    <!-- Paper video. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-            <video id="dollyzoom" controls loop playsinline height="100%">
-              <source src="./static/videos/papers_1571_video.mp4"
-                      type="video/mp4">
-            </video>
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our work aims to enhance existing data-driven motion synthesis frameworks, particularly by addressing limitations in controllability and long-term stability. This section first defines the motion representation employed. Subsequently, we detail our proposed contributions: (1) Adaptive Joint Control Transformer; (2) Reference-guided Feedback for Long-term Generation; and (3) Plug-and-Play Stylization.
+          </p>
+          <img src="./static/images/architecture.png" alt="Architecture Diagram" style="width: 100%; max-width: 800px; margin: 20px 0;">
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+    <!--/ Method. -->
   </div>
 </section>
 
