@@ -162,7 +162,7 @@
     <div class="hero-body">
       <img id="teaser" src="./static/images/fig1.png" alt="Teaser Image" height="100%">
       <h2 class="subtitle has-text-centered">
-        COMET, an autoregressive framework that runs in real time, enabling versatile character control and robust long-horizon synthesis
+        COMET, an autoregressive framework that runs in real time, enabling versatile character control and robust long-horizon synthesis.
       </h2>
     </div>
   </div>
@@ -222,24 +222,28 @@
             <source src="./static/videos/fig4_a.mp4"
                     type="video/mp4">
           </video>
+          <p class="has-text-centered">1 Joint Control</p>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/fig4_b.mp4"
                     type="video/mp4">
           </video>
+          <p class="has-text-centered">2 Joints Control</p>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/fig4_c.mp4"
                     type="video/mp4">
           </video>
+          <p class="has-text-centered">3 Joints Control</p>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/fig4_d.mp4"
                     type="video/mp4">
           </video>
+          <p class="has-text-centered">6 Joints Control</p>
         </div>
       </div>
     </div>
@@ -258,9 +262,7 @@
         <h3 class="title is-4">Motion In-betweening</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            We can achieve motion in-betweening by controlling the 6 joints(pelvis,head, both wrists, both ankles) and applying reference-guided feedback toward a target pose.
           </p>
         </div>
         <div class="columns is-vcentered">
@@ -306,9 +308,7 @@
         <h3 class="title is-4">Stylization</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
+            We can stylize the motion by generating a reference for a specific style and applying reference-guided feedback.          </p>
           <div class="container">
             <div id="results-carousel" class="carousel results-carousel">
               <div class="item item-mib_a">
@@ -316,24 +316,28 @@
                   <source src="./static/videos/fig6_a.mp4"
                           type="video/mp4">
                 </video>
+                <p class="has-text-centered">Walk Style</p>
               </div>
               <div class="item item-chair-tp">
                 <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
                   <source src="./static/videos/fig6_b.mp4"
                           type="video/mp4">
                 </video>
+                <p class="has-text-centered">Bent Forward Style</p>
               </div>
               <div class="item item-shiba">
                 <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
                   <source src="./static/videos/fig6_c.mp4"
                           type="video/mp4">
                 </video>
+                <p class="has-text-centered">Dinosaur Style</p>
               </div>
               <div class="item item-shiba">
                 <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
                   <source src="./static/videos/fig6_c.mp4"
                           type="video/mp4">
                 </video>
+                <p class="has-text-centered">Dinosaur Style</p>
               </div>
             </div>
           </div>
@@ -359,21 +363,21 @@
             <h3 class="title is-4">Reference-guided Feedback</h3>
             <div class="content has-text-justified">
               <p>
-                We can also animate the scene by interpolating the deformation latent codes of two input
-                frames. Use the slider here to linearly interpolate between the left frame and the right
-                frame.
+                
               </p>
             </div>
             <div class="columns is-vcentered">
               <div class="column">
-                <video poster="" id="mib_a" autoplay controls muted loop playsinline width="100%" style="max-width: 800px;">
+                <video poster="" id="mib_a" autoplay controls muted loop playsinline width="100%">
                   <source src="./static/videos/fig5_a.mp4" type="video/mp4">
                 </video>
+                <p class="has-text-centered">W/O Reference-guided Feedback</p>
               </div>
               <div class="column">
-                <video poster="" id="chair-tp" autoplay controls muted loop playsinline width="100%" style="max-width: 800px;">
+                <video poster="" id="chair-tp" autoplay controls muted loop playsinline width="100%">
                   <source src="./static/videos/fig5_b.mp4" type="video/mp4">
                 </video>
+                <p class="has-text-centered">W/ Reference-guided Feedback</p>
               </div>
             </div>
             <br/>
@@ -384,8 +388,7 @@
             <h4 class="title is-5">Motion In-betweening</h4>
             <div class="content has-text-justified">
               <p>
-                Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-                viewpoint such as a stabilized camera by playing back the training deformations.
+
               </p>
             </div>
             <div class="content has-text-centered">
@@ -394,25 +397,34 @@
                   <video poster="" id="motion-video1" autoplay controls muted loop playsinline height="100%">
                     <source src="./static/videos/condmdi_mib.mp4" type="video/mp4">
                   </video>
+                  <p class="has-text-centered">CondMDi</p>
+
                 </div>
                 <div class="column">
                   <video poster="" id="motion-video2" autoplay controls muted loop playsinline height="100%">
                     <source src="./static/videos/dno_mib.mp4" type="video/mp4">
                   </video>
+                  <p class="has-text-centered">DNO</p>
                 </div>
                 <div class="column">
                   <video poster="" id="motion-video3" autoplay controls muted loop playsinline height="100%">
                     <source src="./static/videos/comet_mib.mp4" type="video/mp4">
                   </video>
+                  <p class="has-text-centered">COMET</p>
                 </div>
+              </div>
+              <div class="column">
+                <video poster="" id="motion-video3" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/mib_whole.mp4" type="video/mp4">
+                </video>
+                <p class="has-text-centered">Left : CondMDi, Middle : DNO, Right : COMET</p>
               </div>
             </div>
             <!--/ Re-rendering. -->
             <h4 class="title is-5">Stylization</h4>
             <div class="content has-text-justified">
               <p>
-                Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-                viewpoint such as a stabilized camera by playing back the training deformations.
+
               </p>
             </div>
             <div class="content has-text-centered">
@@ -421,16 +433,19 @@
                   <video poster="" id="motion-video1" autoplay controls muted loop playsinline height="100%">
                     <source src="./static/videos/fig6_b.mp4" type="video/mp4">
                   </video>
+                  <p class="has-text-centered">MOST</p>
                 </div>
                 <div class="column">
                   <video poster="" id="motion-video2" autoplay controls muted loop playsinline height="100%">
                     <source src="./static/videos/fig6_b.mp4" type="video/mp4">
                   </video>
+                  <p class="has-text-centered">SMooDi</p>
                 </div>
                 <div class="column">
                   <video poster="" id="motion-video3" autoplay controls muted loop playsinline height="100%">
                     <source src="./static/videos/fig6_b.mp4" type="video/mp4">
                   </video>
+                  <p class="has-text-centered">COMET</p>
                 </div>
               </div>
             </div>
