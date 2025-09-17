@@ -161,3 +161,8 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+#motion-video1, #motion-video2, #motion-video3 {
+  border-radius: 10px;
+  border: 1px solid #bbb;
+}
