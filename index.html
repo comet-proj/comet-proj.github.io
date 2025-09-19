@@ -160,7 +160,7 @@
     <div class="hero-body">
       <img id="teaser" src="./static/images/fig1.png" alt="Teaser Image" height="100%">
       <h2 class="subtitle has-text-centered">
-        COMET, an autoregressive framework that runs in real time, enabling versatile character control and robust long-horizon synthesis.
+        we propose COMET, a novel and unified framework designed to generate long term, stable human motion with fine-grained joint-level control for real-time application.
       </h2>
     </div>
   </div>
@@ -174,7 +174,7 @@
       <div class="column is-four-fifths">
         <div class="publication-video">
             <video id="dollyzoom" controls loop playsinline height="100%">
-              <source src="./static/videos/papers_1571_video.mp4"
+              <source src="./static/videos/COMET_WACV.mp4"
                       type="video/mp4">
             </video>
         </div>
@@ -188,11 +188,9 @@
             Generating stable and controllable character motion in real-time is a key challenge in computer animation. Existing methods often fail to provide fine-grained control or suffer from motion degradation over long sequences, limiting their use in interactive applications.
           </p>
           <p>
-            We propose COMET, an autoregressive framework that runs in real time, enabling versatile character control and robust long-horizon synthesis. Our efficient Transformer-based conditional VAE allows for precise, interactive control over arbitrary user-specified joints for tasks like goal-reaching and in-betweening from a single model. To ensure long-term temporal stability, we introduce a novel reference-guided feedback mechanism that prevents error accumulation. This mechanism also serves as a plug-and-play stylization module, enabling real-time style transfer. 
-          </p>
+            We propose COMET, an autoregressive framework that runs in real time, enabling versatile character control and robust long-horizon synthesis. Our efficient Transformer-based conditional VAE allows for precise, interactive control over arbitrary user-specified joints for tasks like goal-reaching and in-betweening from a single model. To ensure long-term temporal stability, we introduce a novel reference-guided feedback mechanism that prevents error accumulation. This mechanism also serves as a plug-and-play stylization module, enabling real-time style transfer.          </p>
           <p>
-            Extensive evaluations demonstrate that COMET robustly generates high-quality motion at real-time speeds, significantly outperforming state-of-the-art approaches in complex sequential goal-reaching tasks and confirming its readiness for demanding interactive applications.
-          </p>
+            Extensive evaluations demonstrate that COMET robustly generates high-quality motion at real-time speeds, significantly outperforming state-of-the-art approaches in complex sequential goal-reaching tasks and confirming its readiness for demanding interactive applications.          </p>
         </div>
       </div>
     </div>
@@ -256,8 +254,8 @@
         <h3 class="title is-4">Motion In-betweening</h3>
         <div class="content has-text-justified">
           <p>
-            We can achieve motion in-betweening by controlling the 6 joints(pelvis,head, both wrists, both ankles) and applying reference-guided feedback toward a target pose.
-          </p>
+            Since COMET supports multi-joint control, it can be naturally extended from
+            the multi-joint goal-reaching task to handle motion in-betweening          </p>
         </div>
         <div class="columns is-vcentered">
           <div class="container">
@@ -359,12 +357,11 @@
         <div class="columns is-centered">
           <div class="column is-full-width">
             <h2 class="title is-3 has-text-centered">Comparison</h2>
-    
             <!-- Interpolating. -->
             <h3 class="title is-4">Ablation Study on Reference-guided Feedback</h3>
             <div class="content has-text-justified">
               <p>
-                
+                With RGF enabled, COMET maintains coherent trajectories while accurately reaching all sequential targets.</p>
               </p>
             </div>
             <div class="columns is-vcentered">
